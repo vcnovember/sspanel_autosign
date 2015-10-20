@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*- #
-
+#!/usr/bin/env python3
 
 from urllib import request, parse
 import gzip
@@ -18,9 +18,6 @@ def ungzip(data):
 
 def sign(host = 'www.miaoss.net',UA = None,mycookie = None):
     url = 'http://' + host + '/api.php?cmd=gift500mb'
-#    cj=http.cookiejar.CookieJar()
-#    opener=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
-#    urllib.request.install_opener(opener)
     req = request.Request(url)
     req.add_header('User-Agent', UA)
     req.add_header('Cookie',mycookie)
